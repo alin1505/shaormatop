@@ -6,7 +6,6 @@ import { data } from "./data/data.js";
 import { calcScore } from "./data/calcScore.js";
 import "./App.css";
 
-// Pre-calculate scores at build time and sort
 const PLACES = data
   .map((p) => ({ ...p, score: calcScore(p.criteria) }))
   .sort((a, b) => b.score - a.score);
@@ -21,7 +20,7 @@ export default function App() {
     <div className="app">
       <nav className="navbar">
         <div className="nav-brand" onClick={() => setPage("main")}>
-          🥙 <span>ShaormaTop</span>
+          🥙 <span>Topul Shaormelor Bucuresti</span>
         </div>
         <div className="nav-links">
           <button
